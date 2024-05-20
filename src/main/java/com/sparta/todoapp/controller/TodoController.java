@@ -45,5 +45,11 @@ public class TodoController {
        TodoResponseDTO response = new TodoResponseDTO(todo);
         return ResponseEntity.ok().body(response);
     }
+
+    @DeleteMapping("/{todoId}")
+    public ResponseEntity<TodoResponseDTO> deleteTodo(@PathVariable Long todoId, @RequestBody TodoRequestDTO dto) {
+        todoService.deleteTodo(todoId, dto.getPassword());
+        return ResponseEntity.ok().build();
+    }
 }
 
