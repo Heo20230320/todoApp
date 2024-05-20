@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 
 @Getter
 @Entity
-@AllArgsConstructor
+@NoArgsConstructor
 public class Todo {
 
 
